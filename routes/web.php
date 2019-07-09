@@ -18,8 +18,8 @@ Route::get('/', function () {
 route::get('/user', function () {
     return 'Hello world';
 });
-route::get('/siswa/{id}', function ($id) {
-    return 'Hello world'. $id;
+route::get('/murid/{id?}', function ($id=null) {
+    return 'Hello world '. $id;
 });
 route::get('/karyawan/{id?}', function($id=null) {
     return 'hello dunia '.$id;
@@ -34,5 +34,14 @@ route::get('/admin', function() {
     return view("admin");
 });
 route::get('/admin/{id}', function($id) {
-    return 'hello admin '. $id;
+    return 'hello admin '. $i;
+});
+route::get('/Guru', function() {
+    return view("Guru");
+});
+route::get('/route-controller','GuruController@end');
+route::get('/Siswa-controller','SiswaController@Index');
+route::get('/Siswa-controller/create','SiswaController@create');
+route::get('/Siswa-controller/{id}', function($id) {
+    return "hallo siswa baru .". $id;
 });
